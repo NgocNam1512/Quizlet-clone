@@ -3,5 +3,6 @@ from app import views
 
 urlpatterns = [
     # The home page
+    re_path(r'^.*\.html', views.pages, name='pages'),
     path('', views.index, name='home'),
 ]
