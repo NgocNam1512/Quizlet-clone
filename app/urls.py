@@ -1,8 +1,7 @@
-from django.urls import path, re_path
+from django.urls import path
 from app import views
 
 urlpatterns = [
-    # The home page
-    re_path(r'^.*\.html', views.pages, name='pages'),
-    path('', views.index, name='home'),
+    path('flashcards/', views.FlashcardList.as_view()),
+    path('flashcards/<int:pk>', views.FlashcardDetail.as_view()),
 ]
