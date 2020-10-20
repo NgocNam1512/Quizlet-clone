@@ -11,7 +11,7 @@ class Flashcard(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
 class Card(models.Model):
-    flashcard = models.ForeignKey(Flashcard, on_delete=models.CASCADE)
+    flashcard = models.ForeignKey(Flashcard, related_name='cards', on_delete=models.CASCADE)
     vocabulary = models.CharField(max_length=50)
     meaning = models.CharField(max_length=50)
     created_at = models.DateTimeField(auto_now_add=True)
