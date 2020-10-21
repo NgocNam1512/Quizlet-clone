@@ -6,7 +6,7 @@ class FlashcardSerializer(serializers.ModelSerializer):
     cards = serializers.PrimaryKeyRelatedField(many=True, queryset=Card.objects.all())
     class Meta:
         model = Flashcard
-        fields = ['id', 'title', 'is_private', 'author', 'cards']
+        fields = ['id', 'title', 'description', 'is_private', 'author', 'cards']
 
 class CardSerializer(serializers.ModelSerializer):
     class Meta:
