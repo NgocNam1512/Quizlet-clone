@@ -7,7 +7,7 @@ $ cd Quizlet-clone
 ```
 ## Virtualenv modules installation (Unix based systems)
 ```bash
-$ python -m venv env
+$ python3 -m venv env
 $ source env/bin/activate
 ```
 ## Virtualenv modules installation (Windows based systems)
@@ -21,10 +21,10 @@ $ pip3 install -r requirements.txt
 ```
 ## Create tables
 ```bash
-$ python manage.py makemigrations
-$ python manage.py migrate
+$ python3 manage.py makemigrations
+$ python3 manage.py migrate
 ```
 ## Start the application (development mode)
 ```bash
-$ python manage.py runserver # default port 8000
+$ python3 manage.py runserver # default port 8000
 ```
